@@ -4,6 +4,16 @@ body{
     color: white;
     text-transform: capitalize;
 }
+button{
+    background-color: #6663c0;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid black;
+    padding: 10px;
+    font-size:16px;
+    text-transform: capitalize;
+    font-family: 'Franklin Gothic Medium','Arial', sans-serif;
+}
 .btn-container{
     display: flex;
     justify-content: center;
@@ -12,7 +22,7 @@ body{
     height: 150px;
     width: 150px;
     border-radius: 20%;
-    border: 8px solid black;
+    border: 6px solid black;
     margin: 2rem;
 }
 .red{
