@@ -44,19 +44,16 @@ function checkAns(){
        levelUp();
        
     }else{
-        h2.innerText = "game over! press any key to restart game.";
-        calScore();
+        h2.innerText = `game over! Your Score Was <b>${level}</b> press any key to restart game.`;
+       document.querySelector("body").style.backgroundColor = "red";
+       setTimeout(() => {
+        document.querySelector("body").style.backgroundColor = "white";
+       }, 200);
         resetGame();
         
     }
 }
 
-function calScore(){
-    let h3 = document.createElement("h3");
-    h2.append(h3);
-     h3.classList.add("h3");
-    h3.innerText = `YOUR SCORE IS ${level}`;
-}
 function btnpress() {
     let btn = this;
     userFlash(btn);
