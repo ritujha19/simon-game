@@ -17,13 +17,13 @@ function gameFlash(btn){
     btn.classList.add("flash");
     setTimeout(() => {
         btn.classList.remove("flash");
-    }, 200);
+    }, 150);
 }
 function userFlash(btn){
     btn.classList.add("Uflash");
     setTimeout(() => {
         btn.classList.remove("Uflash");
-    }, 200);
+    }, 150);
 }
 
 function levelUp(){
@@ -34,7 +34,7 @@ function levelUp(){
     let randColor = buts[randIdx];
     let randBtn = document.getElementById(randColor);
     gameSeq.push(randBtn.id);
-    // console.log(gameSeq);
+    console.log(gameSeq);
     gameFlash(randBtn);
 }
 function checkAns(){
@@ -44,8 +44,14 @@ function checkAns(){
        levelUp();
        
     }else{
-        h2.innerText = `game over! Your Score Was <b>${level}</b> press any key to restart game.`;
+        h2.innerHTML = `game over! Your Score Was <b>${level}</b> press button to restart game.`;
         resetGame();
+        // let highscore = 1; 
+        // function checkForHighscore(currentScore){
+        // If(highscore< currentScore){
+        // highscore= currentScore;
+        // }
+        // };
         
     }
 }
